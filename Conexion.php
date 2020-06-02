@@ -1,18 +1,15 @@
 
 <?php
+
+$servername="127.0.0.1";
+$username="root";
+$password="";
+$dbname="php_login";
+$conn = new PDO("mysql:host=$servername;dbname=$dbname",$username,$password); 
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$conn->exec("SET CHARACTER SET utf8");
+
 /*
-$server='localhost';
-$username='root';
-$password='';
-$database='php_login';
-
-try{
-$conn=new PDO("mysql:host=$server;dbname=$database;",$username,$password);
-} catch(PDOException $e){
-}
-*/
-
-
 $dbhost="localhost";
 $dbuser="root";
 $dbpass="";
@@ -23,22 +20,8 @@ $conn=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 if(!$conn){
 die("No hay conexión:".mysqli_connect_error());
 }
-
-$nombre=filter_input(INPUT_POST, "usuario");
-$pass=filter_input(INPUT_POST, "contraseña");
-
-$query=mysqli_query($conn,"SELECT * FROM user WHERE usuario='".$nombre."' and contraseña='".$pass."'");
-$nr=mysqli_num_rows($query);
-
-if($nr==1){
-//header("Location:index.html")
-echo "Bienvenido:".$nombre;
-}
-else if($nr==0)
-{
-echo "No conexion";
-}
+else{echo "Conectado";}
 
 
-mysqli_close($conn);
+mysqli_close($conn); */
 ?>

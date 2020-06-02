@@ -28,11 +28,11 @@ require 'conexion.php';
         <BR>
     <spam>Sí no tienes cuenta:<a href="Registro.php">Registrate</a></spam>
         <BR>
-        <Form action="IniciarSesion.php" method="post">
+        <Form action="Consultas.php" method="post">
         <H3>Ingresa tu Usuario:</H3>
-        <input type="text" name="Usuario" placeholder="Usuario" >
+        <input type="text" name="user" placeholder="Usuario" >
         <H3> Ingresa tu Contraseña:</h3>
-         <input type="password" name="Password" placeholder="Contraseña" >
+         <input type="password" name="password" placeholder="Contraseña" >
          <br>
          <br>
          <br>
